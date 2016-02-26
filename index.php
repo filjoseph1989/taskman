@@ -9,11 +9,15 @@
 <head>
   <meta charset="UTF-8">
   <title>Task</title>
+  <link rel="stylesheet" href="dist/bootstrap.fd.css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="css/font-awesome.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="css/bootstrap.css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="css/material.css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
   <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
   <script type="text/javascript" src="js/material.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script src="js/jquery.csv.js"></script>
 </head>
 <body>
   <header data-scroll-header="" ng-class="{'open': open}">
@@ -21,7 +25,7 @@
       <div class="hamburger-cover">
         <div class="logo"><i class="fa fa-tasks fa-3x"></i></div>
         <ul class="nav">
-          <li><a href="#">Upload File</a></li>
+          <li><a href="#" id="open_btn">Upload File</a></li>
           <li><a href="#">Login</a></li>
           <li class="active"><a href="#">Signup</a></li>
         </ul>
@@ -80,5 +84,46 @@
     </table>
   </div>
   <script type="text/javascript" src="js/timer.js"></script>
+  <script src="js/bootstrap.fd.js"></script>
+  <script type="text/javascript">
+    $("#open_btn").click(function() {
+      $.FileDialog({multiple: true}).on('files.bs.filedialog', function(ev) {
+        var files  = ev.files;
+        var reader = new FileReader();
+        var data = null;
+        reader.readAsText(files[0]);
+        reader.onload = function (event) {
+          console.log(event);
+          var csv_data = event.currentTarget.result;
+          data = $.csv.toArrays(csv_data);
+          console.log(data);
+          if (data && data.length > 0) {
+            alert('Imported -' + data.length + '- rows successfully!');
+          } else {
+            alert('No data to import!');
+          }
+        }
+        // console.log(reader);
+        var text  = "";
+        files.forEach(function(f) {
+          text += f.name + "<br/>";
+        });
+        // $.ajax({
+        //   type: "POST",
+        //   data: {"file":files[0].content},
+        //   url: "upload.php",
+        //   success: function(data) {
+        //     alert(data);
+        //   },
+        //   error: function(data) {
+        //     alert("Problem ?!");
+        //   }
+        // });
+        $("#output").html(text);
+      }).on('cancel.bs.filedialog', function(ev) {
+        $("#output").html("Cancelled!");
+      });
+    });
+  </script>
 </body>
 </html>
