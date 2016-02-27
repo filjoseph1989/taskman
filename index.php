@@ -91,28 +91,6 @@
     $("#open_btn").click(function() {
       $.FileDialog({multiple: true}).on('files.bs.filedialog', function(ev) {
         var files  = ev.files;
-        // var reader = new FileReader();
-        // console.log(files);
-        // var data   = null;
-        // reader.readAsDataURL(files[0]);
-        // reader.readAsText(files[0]);
-        // reader.onload = function (event) {
-        //   console.log(event);
-        //   var upload_data = event.target.result;
-        //   console.log(upload_data);
-          // data         = $.csv.toArrays(csv_data);
-          // if (data && data.length > 0) {
-          //   alert('Imported -' + data.length + '- rows successfully!');
-          // } else {
-          //   alert('No data to import!');
-          // }
-        // }
-
-        // console.log(reader);
-        // var text  = "";
-        // files.forEach(function(f) {
-        //   text += f.name + "<br/>";
-        // });
         $.ajax({
           type: "POST",
           data: {"myfile":files[0].content},
@@ -124,9 +102,8 @@
             alert("Problem ?!");
           }
         });
-        // $("#output").html(text);
       }).on('cancel.bs.filedialog', function(ev) {
-        // $("#output").html("Cancelled!");
+        // cancel message here
       });
     });
   </script>
