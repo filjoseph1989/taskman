@@ -25,10 +25,9 @@
       <div class="hamburger-cover">
         <div class="logo"><i class="fa fa-tasks fa-3x"></i></div>
         <ul class="nav">
-          <li class="active"><a href="#" id="open_btn">Upload File</a></li>
-          <li><a href="#">Save</a></li>
+          <li><a href="#" id="open_btn">Upload File</a></li>
           <li><a href="#">Login</a></li>
-          <li><a href="#">Signup</a></li>
+          <li class="active"><a href="#">Signup</a></li>
         </ul>
         <div class="hamburger" ng-click="open = !open" ng-class="{'open': open}">
           <span class="icon"></span>
@@ -36,10 +35,9 @@
       </div>
       <div class="hamburger-menu" ng-class="{'open': open}">
         <ul>
-          <li class="active"><a href="#">Upload File</a></li>
-          <li><a href="#">Save</a></li>
+          <li><a href="#">Upload File</a></li>
           <li><a href="#">Login</a></li>
-          <li><a href="#">Signup</a></li>
+          <li class="active"><a href="#">Signup</a></li>
           <li class="padded js-geo-hidden js-geo-waitlist">
             <a data-g-event="header:cta:waitlist" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-button--brand" href="" data-upgraded=",MaterialButton,MaterialRipple">Join the waitlist<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
           </li>
@@ -50,7 +48,7 @@
       </div>
     </div>
   </header>
-  <div class="container-fluid container-margin">
+  <div class="container">
     <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
       <?php
         $count = 0;
@@ -93,20 +91,17 @@
         var files  = ev.files;
         var reader = new FileReader();
         console.log(reader);
-        var data   = null;
-        reader.readAsDataURL(files[0]);
+        // var data   = null;
         // reader.readAsText(files[0]);
-        reader.onload = function (event) {
-          console.log(event);
-          var upload_data = event.target.result;
-          console.log(upload_data);
-          // data         = $.csv.toArrays(csv_data);
-          // if (data && data.length > 0) {
-          //   alert('Imported -' + data.length + '- rows successfully!');
-          // } else {
-          //   alert('No data to import!');
-          // }
-        }
+        // reader.onload = function (event) {
+        //   var csv_data = event.currentTarget.result;
+        //   data         = $.csv.toArrays(csv_data);
+        //   if (data && data.length > 0) {
+        //     alert('Imported -' + data.length + '- rows successfully!');
+        //   } else {
+        //     alert('No data to import!');
+        //   }
+        // }
 
         // console.log(reader);
         // var text  = "";

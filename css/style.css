@@ -1,7 +1,3 @@
-.container {
-  padding-top: 90px;
-}
-
 /*Navigation*/
 .demo-list-item {
   width: 300px;
@@ -144,6 +140,9 @@ ul.nav li {
 }
 
 /*Task Table*/
+.container-margin {
+  padding-top: 90px;
+}
 header ul.nav {
   margin-top: 0;
 }
