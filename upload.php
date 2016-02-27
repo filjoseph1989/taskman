@@ -6,9 +6,11 @@ if (!empty($_POST['myfile'])) {
 
   list($type, $data) = explode(';', $data);
   $type = explode('/', $type);
-  // echo "$type";
-  // list(, $data)      = explode(',', $data);
+  if ($type[1] == "jpeg") {
+    $ext = "JPG";
+  }
+  list(, $data)      = explode(',', $data);
   $data              = base64_decode($data);
-  file_put_contents('uploads/image.'.$type[1], $data);
+  file_put_contents('uploads/image.'.$ext, $data);
 }
 ?>
