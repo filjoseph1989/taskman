@@ -1,4 +1,12 @@
 <?php
+/**
+ * @author Fil Joseph Elman
+ * @contact filjoseph22@gmail.com
+ * @date 02-20-2016
+ * @date 03-01-2016
+ * @version 1.0.0
+ *
+ */
   require_once "vendor/autoload.php";
   require_once "functions/time.php";
   require_once "functions/function.php";
@@ -53,9 +61,10 @@
     </div>
   </header>
   <div class="container-fluid container-margin">
-    <?php if (!empty($csv->data)) { ?>
+    <?php if (is_array($csv->data)) { ?>
       <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
         <?php
+        $temp_id = "";
         foreach ($csv->data as $key => $value) {
           $count_value = count($value);
           if ($key == 0) { ?>
@@ -70,7 +79,7 @@
             </thead>
             <tbody>
           <?php } else { ?>
-            <tr id="<?php echo task_toggle_id($value[0]); ?>">
+            <tr class="<?php echo task_toggle_id($value[0]); ?>">
               <td class="mdl-data-table__cell--non-numeric"><?php echo task_indent($value[0]); ?></td>
               <?php for ($i = 1; $i < $count_value; $i++) { ?>
                 <?php if ( isset($value[$i])) { ?>
@@ -82,11 +91,12 @@
               <td><input type="checkbox" class="pauseResume" /><label for="pauseResume">Start</label></td>
             </tr>
           <?php } # if ?>
-          <?php // $count++; ?>
         <?php } # foreach ?>
         </tbody>
       </table>
-    <?php } ?>
+    <?php } else {
+      echo "No data yet";
+    } ?>
   </div>
   <script type="text/javascript" src="js/timer.js"></script>
   <script src="js/bootstrap.fd.js"></script>
