@@ -16,7 +16,7 @@
  */
 if (! function_exists('task_indent')) {
   function task_indent($task) {
-    $i     = 0;
+    $i = 0;
     while ($task[$i] == ' ') {
       $task[$i] = "&";
       $i++;

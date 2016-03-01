@@ -2,7 +2,9 @@
   require_once "vendor/autoload.php";
   require_once "functions/time.php";
   require_once "functions/function.php";
-  $csv = array_map('str_getcsv', file('task.csv'));
+  require_once('parsecsv.lib.php');
+  $csv = new parseCSV();
+  $csv->import('uploads/task.csv');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,8 +27,8 @@
       <div class="hamburger-cover">
         <div class="logo"><i class="fa fa-tasks fa-3x"></i></div>
         <ul class="nav">
-          <li class="active"><a href="#" id="open_btn">Upload File</a></li>
-          <li><a href="#">Save</a></li>
+          <li class="active open_btn"><a href="#">Import</a></li>
+          <li><a href="#">Export</a></li>
           <li><a href="#">Login</a></li>
           <li><a href="#">Signup</a></li>
         </ul>
@@ -36,8 +38,8 @@
       </div>
       <div class="hamburger-menu" ng-class="{'open': open}">
         <ul>
-          <li class="active"><a href="#">Upload File</a></li>
-          <li><a href="#">Save</a></li>
+          <li class="active open_btn"><a href="#">Import</a></li>
+          <li><a href="#">Export</a></li>
           <li><a href="#">Login</a></li>
           <li><a href="#">Signup</a></li>
           <li class="padded js-geo-hidden js-geo-waitlist">
@@ -51,12 +53,12 @@
     </div>
   </header>
   <div class="container-fluid container-margin">
-    <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
-      <?php
-        $count = 0;
-        $count_value = count($csv[0]);
-        foreach ($csv as $key => $value) {
-          if ($count == 0) { ?>
+    <?php if (!empty($csv->data)) { ?>
+      <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+        <?php
+        foreach ($csv->data as $key => $value) {
+          $count_value = count($value);
+          if ($key == 0) { ?>
             <thead>
               <tr>
                 <th class="mdl-data-table__cell--non-numeric"><?php echo $value[0]; ?></th>
@@ -68,35 +70,39 @@
             </thead>
             <tbody>
           <?php } else { ?>
-            <tr>
-              <td class="mdl-data-table__cell--non-numeric"><?php echo task_indent($value[0]); ?></td>
-              <?php for ($i = 1; $i < $count_value; $i++) { ?>
-                <?php if ( isset($value[$i])) { ?>
-                  <td><?php echo convert_date( checker($value[$i]) ); ?></td>
-                <?php } else { ?>
-                  <td>&nbsp;</td>
-                <?php } ?>
-              <?php } # for ?>
-              <td><input type="checkbox" class="pauseResume" /><label for="pauseResume">Start</label></td>
-            </tr>
+              <tr>
+                <td class="mdl-data-table__cell--non-numeric"><?php echo task_indent($value[0]); ?></td>
+                <?php for ($i = 1; $i < $count_value; $i++) { ?>
+                  <?php if ( isset($value[$i])) { ?>
+                    <td><?php echo convert_date( checker($value[$i]) ); ?></td>
+                  <?php } else { ?>
+                    <td>&nbsp;</td>
+                  <?php } # if ?>
+                <?php } # for ?>
+                <td><input type="checkbox" class="pauseResume" /><label for="pauseResume">Start</label></td>
+              </tr>
           <?php } # if ?>
-        <?php $count++; ?>
-      <?php } # foreach ?>
-      </tbody>
-    </table>
+          <?php // $count++; ?>
+        <?php } # foreach ?>
+        </tbody>
+      </table>
+    <?php } ?>
   </div>
   <script type="text/javascript" src="js/timer.js"></script>
   <script src="js/bootstrap.fd.js"></script>
   <script type="text/javascript">
-    $("#open_btn").click(function() {
+    $(".open_btn").click(function() {
       $.FileDialog({multiple: true}).on('files.bs.filedialog', function(ev) {
         var files  = ev.files;
         $.ajax({
           type: "POST",
-          data: {"myfile":files[0].content},
+          data: {
+            "myfile":files[0].content,
+            "name":files[0].name
+          },
           url: "upload.php",
           success: function(data) {
-            alert(data);
+            window.location = "http://localhost/taskman";
           },
           error: function(data) {
             alert("Problem ?!");

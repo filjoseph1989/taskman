@@ -5,12 +5,11 @@ if (!empty($_POST['myfile'])) {
   $data = $_POST['myfile'];
 
   list($type, $data) = explode(';', $data);
-  $type = explode('/', $type);
-  if ($type[1] == "jpeg") {
-    $ext = "JPG";
+  $type              = explode('.', $_POST['name']);
+  if ($type[1] == "csv") {
+    list(, $data)      = explode(',', $data);
+    $data              = base64_decode($data);
+    file_put_contents('uploads/'.$_POST['name'], $data);
   }
-  list(, $data)      = explode(',', $data);
-  $data              = base64_decode($data);
-  file_put_contents('uploads/image.'.$ext, $data);
 }
 ?>
