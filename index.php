@@ -70,8 +70,8 @@
             </thead>
             <tbody>
           <?php } else { ?>
-              <tr>
-                <td class="mdl-data-table__cell--non-numeric"><?php echo task_indent($value[0]); ?></td>
+              <tr id="<?php echo task_toggle_id($value[0]); ?>">
+                <td class="mdl-data-table__cell--non-numeric collapse"><?php echo task_indent($value[0]); ?></td>
                 <?php for ($i = 1; $i < $count_value; $i++) { ?>
                   <?php if ( isset($value[$i])) { ?>
                     <td><?php echo convert_date( checker($value[$i]) ); ?></td>

@@ -4,15 +4,16 @@
  * If click again display pause
  */
 $(document).ready(function() {
+  // Create an object
   var Clock = {
     totalSeconds: 800,
     start: function () {
       var self = this;
       this.interval = setInterval(function () {
-          self.totalSeconds -= 1;
-          $("#hour").text(Math.floor(self.totalSeconds / 3600));
-          $("#min").text(Math.floor(self.totalSeconds / 60 % 60));
-          $("#sec").text(parseInt(self.totalSeconds % 60));
+        self.totalSeconds -= 1;
+        $("#hour").text(Math.floor(self.totalSeconds / 3600));
+        $("#min").text(Math.floor(self.totalSeconds / 60 % 60));
+        $("#sec").text(parseInt(self.totalSeconds % 60));
       }, 1000);
     },
     pause: function () {
@@ -33,6 +34,18 @@ $(document).ready(function() {
       $(this).next('label').text("Pause");
     }
   });
-  // $('#pauseResume').button();
+
+  $('.collapse').click(function () {
+    if ($(this).is(":checked")) {
+    } else {
+    }
+  });
+  $( "#clickme" ).click(function() {
+    $( "#book" ).toggle( "slow", function() {
+      // Animation complete.
+    });
+  });  // $('#pauseResume').button();
   // $('#pauseResume').next('label').text("Pause");
+
+
 });
