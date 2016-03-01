@@ -16,20 +16,9 @@
  */
 if (! function_exists('task_toggle_id')) {
   function task_toggle_id($task) {
-    $task_id = explode(' ', $task);
-    // $i = 0;
-    // while ($task[$i] == ' ') {
-    //   $task[$i] = "&";
-    //   $i++;
-    // }
-    // $i -= 1;
-    // if ( $i != -1) {
-    //   $task[$i] = "*";
-    // }
-    // $task = str_replace('&', "&emsp;", $task);
-    // $task = str_replace('*', "<i class=\"fa fa-angle-right\"></i>&nbsp;", $task);
+    $task = replace_space($task);
     if (isset($task_id[0])) {
-      return $task;
+      return $task_id[0];
     }
   }
 }
@@ -41,6 +30,18 @@ if (! function_exists('task_toggle_id')) {
  */
 if (! function_exists('task_indent')) {
   function task_indent($task) {
+    $task = replace_space($task);
+    $task = str_replace('&', "&emsp;", $task);
+    $task = str_replace('*', "<i class=\"fa fa-angle-right\"></i>&nbsp;", $task);
+    return $task;
+  }
+}
+
+ /**
+ * Replace space with & and *
+ */
+if (! function_exists('replace_space')) {
+  function replace_space($task) {
     $i = 0;
     while ($task[$i] == ' ') {
       $task[$i] = "&";
@@ -50,8 +51,6 @@ if (! function_exists('task_indent')) {
     if ( $i != -1) {
       $task[$i] = "*";
     }
-    $task       = str_replace('&', "&emsp;", $task);
-    $task       = str_replace('*', "<i class=\"fa fa-angle-right\"></i>&nbsp;", $task);
     return $task;
   }
 }
