@@ -14,17 +14,19 @@
   * @param string $task, Name of the task.
   * @return $task, A modified task.
   */
-if (! function_exists('task_toggle_id')) {
-  function task_toggle_id($task) {
+if (! function_exists('task_toggle_class')) {
+  function task_toggle_class($task) {
     $task = replace_space($task);
+    $pos  = strpos($task, '*');
     $task = str_replace('&', '', $task);
     $task = str_replace('*', '', $task);
     $task = str_replace(' ', '-', $task);
     $task = strtolower($task);
-    return $task;
-    // if (isset($task_id[0])) {
-    //   return $task_id[0];
-    // }
+    $task_array = array(
+      'class' => $task,
+      'pos'   => $pos
+    );
+    return $task_array;
   }
 }
 

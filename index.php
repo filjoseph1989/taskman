@@ -64,7 +64,7 @@
     <?php if (is_array($csv->data)) { ?>
       <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
         <?php
-        $temp_id = "";
+        $temp_class = "";
         foreach ($csv->data as $key => $value) {
           $count_value = count($value);
           if ($key == 0) { ?>
@@ -79,7 +79,8 @@
             </thead>
             <tbody>
           <?php } else { ?>
-            <tr class="<?php echo task_toggle_id($value[0]); ?>">
+            <?php $temp_class = task_toggle_class($value[0]); ?>
+            <tr class="<?php echo $temp_class['class'].$temp_class['pos']; ?>">
               <td class="mdl-data-table__cell--non-numeric"><?php echo task_indent($value[0]); ?></td>
               <?php for ($i = 1; $i < $count_value; $i++) { ?>
                 <?php if ( isset($value[$i])) { ?>
