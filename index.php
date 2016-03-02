@@ -79,8 +79,13 @@
             </thead>
             <tbody>
           <?php } else { ?>
-            <?php $temp_class = task_toggle_class($value[0]); ?>
-            <tr class="<?php echo $temp_class['class'].$temp_class['pos']; ?>">
+            <?php
+              if (isset($temp_class['class'])) {
+                $relation = row_relation($value[0], $temp_class['class'], $temp_class['pos']);
+              }
+              $temp_class = task_toggle_class($value[0]);
+            ?>
+            <tr class="<?php echo $relation; ?>">
               <td class="mdl-data-table__cell--non-numeric"><?php echo task_indent($value[0]); ?></td>
               <?php for ($i = 1; $i < $count_value; $i++) { ?>
                 <?php if ( isset($value[$i])) { ?>

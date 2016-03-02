@@ -15,7 +15,13 @@
   * @return $task, A modified task.
   */
 if (! function_exists('row_relation')) {
-  function row_relation($task) {
+  function row_relation($new_class, $old_class, $old_pos) {
+    $new_class = replace_space($new_class);
+    $new_pos   = strpos($new_class, '*');
+    if ($new_pos > $old_pos) {
+      $relation = "child-".$old_class;
+      return $relation;
+    }
   }
 }
 
