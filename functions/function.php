@@ -10,6 +10,16 @@
  */
 
  /**
+  * This function will determine the relationship of each row
+  * @param string $task, Name of the task.
+  * @return $task, A modified task.
+  */
+if (! function_exists('row_relation')) {
+  function row_relation($task) {
+  }
+}
+
+ /**
   * Generate id use for toggle effect of the table row
   * @param string $task, Name of the task.
   * @return $task, A modified task.
