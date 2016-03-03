@@ -3,14 +3,14 @@
  * @author Fil Joseph Elman
  * @contact filjoseph22@gmail.com
  * @date 02-20-2016
- * @date 03-01-2016
+ * @date 03-02-2016
  * @version 1.0.0
  *
  */
   require_once "vendor/autoload.php";
   require_once "functions/time.php";
   require_once "functions/function.php";
-  require_once('parsecsv.lib.php');
+  require_once "parsecsv.lib.php";
   $csv = new parseCSV();
   $csv->import('uploads/task.csv');
 ?>
@@ -27,7 +27,8 @@
   <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
   <script type="text/javascript" src="js/material.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
-  <script src="js/jquery.csv.js"></script>
+  <script type="text/javascript" src="js/jquery.csv.js"></script>
+  <script type="text/javascript" src="js/taskman_functions.js"></script>
 </head>
 <body>
   <header data-scroll-header="" ng-class="{'open': open}">
@@ -65,6 +66,8 @@
       <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
         <?php
         $temp_class = "";
+        $pos        = -1;
+        $loop_cnt = 0;
         foreach ($csv->data as $key => $value) {
           $count_value = count($value);
           if ($key == 0) { ?>
@@ -80,13 +83,15 @@
             <tbody>
           <?php } else { ?>
             <?php
-              if (isset($temp_class['class'])) {
-                $relation = row_relation($value[0], $temp_class['class'], $temp_class['pos']);
-              }
               $temp_class = task_toggle_class($value[0]);
+              if ($pos < $temp_class['pos']) {
+                $pos = $temp_class['pos'];
+              }
             ?>
-            <tr class="<?php echo $relation; ?>">
-              <td class="mdl-data-table__cell--non-numeric"><?php echo task_indent($value[0]); ?></td>
+            <tr class="<?php echo "task".'-'.(($loop_cnt==1)?"parent":$temp_class['pos']); ?>">
+              <td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '<?php echo (($loop_cnt==1)?"parent":$temp_class['pos']); ?>')"><?php echo task_indent($value[0]); ?></a>
+              </td>
               <?php for ($i = 1; $i < $count_value; $i++) { ?>
                 <?php if ( isset($value[$i])) { ?>
                   <td><?php echo convert_date( checker($value[$i]) ); ?></td>
@@ -97,6 +102,7 @@
               <td><input type="checkbox" class="pauseResume" /><label for="pauseResume">Start</label></td>
             </tr>
           <?php } # if ?>
+          <?php $loop_cnt++; ?>
         <?php } # foreach ?>
         </tbody>
       </table>
@@ -104,8 +110,11 @@
       echo "No data yet";
     } ?>
   </div>
-  <script type="text/javascript" src="js/timer.js"></script>
-  <script src="js/bootstrap.fd.js"></script>
+  <script type="text/javascript">
+    window.pos = "<?php echo $pos; ?>";
+  </script>
+  <script type="text/javascript" src="js/taskman.js"></script>
+  <script type="text/javascript" src="js/bootstrap.fd.js"></script>
   <script type="text/javascript">
     $(".open_btn").click(function() {
       $.FileDialog({multiple: true}).on('files.bs.filedialog', function(ev) {

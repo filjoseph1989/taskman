@@ -35,17 +35,4 @@ $(document).ready(function() {
     }
   });
 
-  $('.collapse').click(function () {
-    if ($(this).is(":checked")) {
-    } else {
-    }
-  });
-  $( "#clickme" ).click(function() {
-    $( "#book" ).toggle( "slow", function() {
-      // Animation complete.
-    });
-  });  // $('#pauseResume').button();
-  // $('#pauseResume').next('label').text("Pause");
-
-
 });

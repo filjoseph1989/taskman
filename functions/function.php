@@ -3,7 +3,7 @@
  * @author Fil Joseph Elman
  * @contact filjoseph22@gmail.com
  * @date 02-20-2016
- * @date 03-01-2016
+ * @date 03-02-2016
  * @version 1.0.0
  *
  * This file contains functions to this framework perform faster.
@@ -11,6 +11,8 @@
 
  /**
   * This function will determine the relationship of each row
+  * This function is EXPEREMENTAL
+  *
   * @param string $task, Name of the task.
   * @return $task, A modified task.
   */
@@ -26,7 +28,7 @@ if (! function_exists('row_relation')) {
 }
 
  /**
-  * Generate id use for toggle effect of the table row
+  * Generate class use for toggle effect of the table row
   * @param string $task, Name of the task.
   * @return $task, A modified task.
   */
