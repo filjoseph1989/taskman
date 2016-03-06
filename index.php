@@ -3,7 +3,7 @@
  * @author Fil Joseph Elman
  * @contact filjoseph22@gmail.com
  * @date 02-20-2016
- * @date 03-02-2016
+ * @date 03-06-2016
  * @version 1.0.0
  *
  */
@@ -19,6 +19,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Task</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="dist/bootstrap.fd.css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="css/font-awesome.css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="css/bootstrap.css" media="screen" title="no title" charset="utf-8">
