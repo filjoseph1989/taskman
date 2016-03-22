@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+<html lang="en" class="mdl-js"><head>
+  <meta charset="UTF-8">
+  <title>Task</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="dist/bootstrap.fd.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="css/font-awesome.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="css/bootstrap.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="css/material.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
+  <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+  <script type="text/javascript" src="js/material.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/jquery.csv.js"></script>
+  <script type="text/javascript" src="js/taskman_functions.js"></script>
+<style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style></head>
+<body data-pinterest-extension-installed="cr1.39.1">
+  <header data-scroll-header="" ng-class="{'open': open}">
+    <div class="main-contained">
+      <div class="hamburger-cover">
+        <div class="logo"><i class="fa fa-tasks fa-3x"></i></div>
+        <ul class="nav">
+          <li class="active open_btn"><a href="#">Import</a></li>
+          <li><a href="#">Export</a></li>
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Signup</a></li>
+        </ul>
+        <div class="hamburger" ng-click="open = !open" ng-class="{'open': open}">
+          <span class="icon"></span>
+        </div>
+      </div>
+      <div class="hamburger-menu" ng-class="{'open': open}">
+        <ul>
+          <li class="active open_btn"><a href="#">Import</a></li>
+          <li><a href="#">Export</a></li>
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Signup</a></li>
+          <li class="padded js-geo-hidden js-geo-waitlist">
+            <a data-g-event="header:cta:waitlist" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-button--brand" href="" data-upgraded=",MaterialButton,MaterialRipple">Join the waitlist<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+          </li>
+          <li class="padded js-geo-sign-in">
+            <a data-g-event="header:cta:signin" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-button--brand js-pass-params js-exp-noww-ww" href="https://contributor.google.com/?utm_source=NOWW#/signuppayment" data-upgraded=",MaterialButton,MaterialRipple">Sign in<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <div class="container-fluid container-margin">
+          <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp is-upgraded" data-upgraded=",MaterialDataTable">
+                    <thead>
+              <tr>
+                <th><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></th><th class="mdl-data-table__cell--non-numeric">Subject</th>
+                                  <th>% complete</th>
+                                  <th>Time spent</th>
+                                  <th>Creation date</th>
+                                <th>Timer</th>
+              </tr>
+            </thead>
+            <tbody>
+                                                    <tr class="task-parent">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', 'parent')">Mindanao Medical Foundation College</a>
+              </td>
+                                                <td></td>
+                                                                <td></td>
+                                                                <td>Dec 16, 2015</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-0">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '0')"><i class="fa fa-angle-right"></i>&nbsp;Implementation Plan</a>
+              </td>
+                                                <td></td>
+                                                                <td></td>
+                                                                <td>Feb 5, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-0">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '0')"><i class="fa fa-angle-right"></i>&nbsp;Encoding</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>5:37:17</td>
+                                                                <td>Feb 4, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-0">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '0')"><i class="fa fa-angle-right"></i>&nbsp;Theme Development</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>(69:14:15)</td>
+                                                                <td>Dec 16, 2015</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-1">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '1')"> <i class="fa fa-angle-right"></i>&nbsp;Pages</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>(9:37:34)</td>
+                                                                <td>Jan 29, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-2">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '2')">  <i class="fa fa-angle-right"></i>&nbsp;Community</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Feb 2, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-2">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '2')">  <i class="fa fa-angle-right"></i>&nbsp;Research</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Feb 2, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-2">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '2')">  <i class="fa fa-angle-right"></i>&nbsp;Downloadables</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>(1:19:44)</td>
+                                                                <td>Feb 1, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Issue</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>0:53:47</td>
+                                                                <td>Feb 1, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-2">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '2')">  <i class="fa fa-angle-right"></i>&nbsp;Dropdown</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>1:21:06</td>
+                                                                <td>Feb 1, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-2">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '2')">  <i class="fa fa-angle-right"></i>&nbsp;404 error</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>0:50:16</td>
+                                                                <td>Jan 29, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-2">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '2')">  <i class="fa fa-angle-right"></i>&nbsp;News</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>(2:00:58)</td>
+                                                                <td>Jan 29, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-3">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '3')">   <i class="fa fa-angle-right"></i>&nbsp;News</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>1:34:06</td>
+                                                                <td>Jan 29, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-2">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '2')">  <i class="fa fa-angle-right"></i>&nbsp;School Events</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>(0:35:32)</td>
+                                                                <td>Jan 18, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-3">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '3')">   <i class="fa fa-angle-right"></i>&nbsp;Content</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 18, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Card</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>(0:35:32)</td>
+                                                                <td>Jan 18, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-5">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '5')">     <i class="fa fa-angle-right"></i>&nbsp;Excert</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>0:01:25</td>
+                                                                <td>Jan 18, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-5">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '5')">     <i class="fa fa-angle-right"></i>&nbsp;Permalink</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>0:09:59</td>
+                                                                <td>Jan 18, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-5">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '5')">     <i class="fa fa-angle-right"></i>&nbsp;Post Image</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>0:24:08</td>
+                                                                <td>Jan 18, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-3">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '3')">   <i class="fa fa-angle-right"></i>&nbsp;Issues</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 18, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Issue 002</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 18, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Issue 001</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 18, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-2">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '2')">  <i class="fa fa-angle-right"></i>&nbsp;Courses</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>(1:53:50)</td>
+                                                                <td>Jan 18, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-3">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '3')">   <i class="fa fa-angle-right"></i>&nbsp;Issues</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>(1:53:50)</td>
+                                                                <td>Jan 18, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Issue 004</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>1:31:37</td>
+                                                                <td>Feb 5, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Issue 003</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>0:18:07</td>
+                                                                <td>Jan 29, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Issue 002</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>0:02:03</td>
+                                                                <td>Jan 21, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Issue 001</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>0:02:03</td>
+                                                                <td>Jan 18, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-2">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '2')">  <i class="fa fa-angle-right"></i>&nbsp;Contact</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>(1:10:21)</td>
+                                                                <td>Jan 17, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-3">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '3')">   <i class="fa fa-angle-right"></i>&nbsp;Info</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 17, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Address</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 17, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Email</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 17, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Phone</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 17, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-3">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '3')">   <i class="fa fa-angle-right"></i>&nbsp;Form</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>(1:10:21)</td>
+                                                                <td>Jan 17, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Issues</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>(1:10:21)</td>
+                                                                <td>Jan 17, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-5">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '5')">     <i class="fa fa-angle-right"></i>&nbsp;Issue 002</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>1:10:21</td>
+                                                                <td>Feb 4, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-5">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '5')">     <i class="fa fa-angle-right"></i>&nbsp;Issue 001</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 17, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-2">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '2')">  <i class="fa fa-angle-right"></i>&nbsp;About Us</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>(0:25:47)</td>
+                                                                <td>Jan 14, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-3">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '3')">   <i class="fa fa-angle-right"></i>&nbsp;Issues</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>(0:00:08)</td>
+                                                                <td>Feb 5, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Issue 001</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>0:00:08</td>
+                                                                <td>Feb 5, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-3">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '3')">   <i class="fa fa-angle-right"></i>&nbsp;Content</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>(0:25:39)</td>
+                                                                <td>Jan 15, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Vision and Mission</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>0:00:13</td>
+                                                                <td>Jan 19, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Credentials</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>0:00:07</td>
+                                                                <td>Jan 19, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Issues</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>(0:25:19)</td>
+                                                                <td>Jan 15, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-5">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '5')">     <i class="fa fa-angle-right"></i>&nbsp;Issue 003</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 19, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-5">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '5')">     <i class="fa fa-angle-right"></i>&nbsp;Issue 002</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 19, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-5">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '5')">     <i class="fa fa-angle-right"></i>&nbsp;Issue 001</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>0:25:19</td>
+                                                                <td>Jan 19, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-2">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '2')">  <i class="fa fa-angle-right"></i>&nbsp;Landing Page</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 7, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-3">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '3')">   <i class="fa fa-angle-right"></i>&nbsp;Issues</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 15, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-1">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '1')"> <i class="fa fa-angle-right"></i>&nbsp;Issues</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>(2:06:57)</td>
+                                                                <td>Jan 27, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-3">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '3')">   <i class="fa fa-angle-right"></i>&nbsp;Issue 009</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>0:18:11</td>
+                                                                <td>Feb 1, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-3">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '3')">   <i class="fa fa-angle-right"></i>&nbsp;Issue 008</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>0:18:07</td>
+                                                                <td>Feb 1, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-3">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '3')">   <i class="fa fa-angle-right"></i>&nbsp;Issue 007</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>0:18:07</td>
+                                                                <td>Jan 29, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-3">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '3')">   <i class="fa fa-angle-right"></i>&nbsp;Issue 006</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>0:18:11</td>
+                                                                <td>Jan 28, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-3">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '3')">   <i class="fa fa-angle-right"></i>&nbsp;Issue 005</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>0:18:07</td>
+                                                                <td>Jan 27, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-3">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '3')">   <i class="fa fa-angle-right"></i>&nbsp;Issue 003</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>0:18:07</td>
+                                                                <td>Jan 27, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-3">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '3')">   <i class="fa fa-angle-right"></i>&nbsp;Issue 001</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 27, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-3">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '3')">   <i class="fa fa-angle-right"></i>&nbsp;Issue 002</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 27, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-3">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '3')">   <i class="fa fa-angle-right"></i>&nbsp;Issue 004</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>0:18:07</td>
+                                                                <td>Jan 27, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-1">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '1')"> <i class="fa fa-angle-right"></i>&nbsp;Home</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>(57:29:44)</td>
+                                                                <td>Jan 20, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-2">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '2')">  <i class="fa fa-angle-right"></i>&nbsp;Issues</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>(0:00:45)</td>
+                                                                <td>Jan 20, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-3">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '3')">   <i class="fa fa-angle-right"></i>&nbsp;Issue 008</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>0:00:45</td>
+                                                                <td>Jan 20, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-3">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '3')">   <i class="fa fa-angle-right"></i>&nbsp;Issue 007</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 20, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-3">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '3')">   <i class="fa fa-angle-right"></i>&nbsp;Issue 006</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 20, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-3">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '3')">   <i class="fa fa-angle-right"></i>&nbsp;Issue 005</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 20, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-3">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '3')">   <i class="fa fa-angle-right"></i>&nbsp;Issue 004</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 20, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-3">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '3')">   <i class="fa fa-angle-right"></i>&nbsp;Issue 003</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 20, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-3">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '3')">   <i class="fa fa-angle-right"></i>&nbsp;Issue 002</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 20, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Issue 002.1</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 20, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-3">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '3')">   <i class="fa fa-angle-right"></i>&nbsp;Issue 001</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 20, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-2">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '2')">  <i class="fa fa-angle-right"></i>&nbsp;Links and Sections</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>(52:34:53)</td>
+                                                                <td>Jan 20, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-3">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '3')">   <i class="fa fa-angle-right"></i>&nbsp;Navigation</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>(2:47:08)</td>
+                                                                <td>Jan 27, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Issue 009</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>1:03:06</td>
+                                                                <td>Jan 27, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Issue 008</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>0:07:00</td>
+                                                                <td>Jan 27, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Issue 007</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 27, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Issue 006</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 27, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Issue 005</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 27, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Issue 004</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 27, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Issue 003</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 27, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Issue 002</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 27, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Issue 001</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>0:00:02</td>
+                                                                <td>Jan 27, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-3">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '3')">   <i class="fa fa-angle-right"></i>&nbsp;Banner</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>(16:16:37)</td>
+                                                                <td>Jan 27, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Issues</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>(1:03:20)</td>
+                                                                <td>Jan 27, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-5">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '5')">     <i class="fa fa-angle-right"></i>&nbsp;Issue 001</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>0:06:35</td>
+                                                                <td>Jan 27, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-5">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '5')">     <i class="fa fa-angle-right"></i>&nbsp;Issue 002</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>0:50:10</td>
+                                                                <td>Jan 27, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-5">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '5')">     <i class="fa fa-angle-right"></i>&nbsp;Issue 003</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>0:06:35</td>
+                                                                <td>Jan 27, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Videos/Image</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>(13:11:19)</td>
+                                                                <td>Jan 27, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-5">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '5')">     <i class="fa fa-angle-right"></i>&nbsp;Issue 013</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>2:47:20</td>
+                                                                <td>Feb 5, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-5">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '5')">     <i class="fa fa-angle-right"></i>&nbsp;Issue 012</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>1:57:49</td>
+                                                                <td>Feb 5, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-5">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '5')">     <i class="fa fa-angle-right"></i>&nbsp;Issue 011</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>1:36:23</td>
+                                                                <td>Jan 27, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-5">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '5')">     <i class="fa fa-angle-right"></i>&nbsp;Issue 010</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>0:39:46</td>
+                                                                <td>Jan 27, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-5">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '5')">     <i class="fa fa-angle-right"></i>&nbsp;Issue 002</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 27, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-5">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '5')">     <i class="fa fa-angle-right"></i>&nbsp;Issue 001</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 27, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-5">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '5')">     <i class="fa fa-angle-right"></i>&nbsp;Issue 008</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>4:56:09</td>
+                                                                <td>Jan 27, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-6">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '6')">      <i class="fa fa-angle-right"></i>&nbsp;Issue 008.1</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 27, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-5">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '5')">     <i class="fa fa-angle-right"></i>&nbsp;Issue 009</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>0:22:19</td>
+                                                                <td>Jan 27, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-5">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '5')">     <i class="fa fa-angle-right"></i>&nbsp;Issue 007</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>0:22:19</td>
+                                                                <td>Jan 27, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-5">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '5')">     <i class="fa fa-angle-right"></i>&nbsp;Issue 006</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>0:29:14</td>
+                                                                <td>Jan 27, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-5">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '5')">     <i class="fa fa-angle-right"></i>&nbsp;Issue 005</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 27, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-5">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '5')">     <i class="fa fa-angle-right"></i>&nbsp;Issue 004</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 27, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-5">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '5')">     <i class="fa fa-angle-right"></i>&nbsp;Issue 003</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 27, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-6">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '6')">      <i class="fa fa-angle-right"></i>&nbsp;Issue 003.1</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 27, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Title</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 27, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-5">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '5')">     <i class="fa fa-angle-right"></i>&nbsp;Issue 001</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 27, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Brochure</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>(2:01:58)</td>
+                                                                <td>Jan 27, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-5">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '5')">     <i class="fa fa-angle-right"></i>&nbsp;Issue 002</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 27, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-5">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '5')">     <i class="fa fa-angle-right"></i>&nbsp;Issue 001</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>0:30:20</td>
+                                                                <td>Jan 27, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-3">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '3')">   <i class="fa fa-angle-right"></i>&nbsp;Featured Cards</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>(11:53:33)</td>
+                                                                <td>Jan 22, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Issue 009</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>5:50:47</td>
+                                                                <td>Jan 27, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Issue 008</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>3:11:22</td>
+                                                                <td>Jan 27, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Issue 007</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>2:47:30</td>
+                                                                <td>Jan 22, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Issue 006</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>0:03:54</td>
+                                                                <td>Jan 22, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Issue 003</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 22, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Issue 005</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 22, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Issue 004</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 22, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Issue 002</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 22, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Issue 001</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 22, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-3">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '3')">   <i class="fa fa-angle-right"></i>&nbsp;Campus Tour</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>(1:43:07)</td>
+                                                                <td>Jan 21, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Issue 006</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>0:09:37</td>
+                                                                <td>Jan 21, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Issue 005</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 21, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Issue 004</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>0:44:18</td>
+                                                                <td>Jan 21, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Issue 003</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>(0:49:12)</td>
+                                                                <td>Jan 21, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-5">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '5')">     <i class="fa fa-angle-right"></i>&nbsp;Issue 003.3</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>0:06:53</td>
+                                                                <td>Jan 21, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-5">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '5')">     <i class="fa fa-angle-right"></i>&nbsp;Issue 003.2</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>0:06:48</td>
+                                                                <td>Jan 21, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-5">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '5')">     <i class="fa fa-angle-right"></i>&nbsp;Issue 003.1</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>0:14:09</td>
+                                                                <td>Jan 21, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Issue 002</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 21, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Issue 001</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 21, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-3">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '3')">   <i class="fa fa-angle-right"></i>&nbsp;Footer</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>(17:54:00)</td>
+                                                                <td>Jan 21, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Issue 005</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>0:55:48</td>
+                                                                <td>Feb 5, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Issue 004</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>16:58:12</td>
+                                                                <td>Feb 4, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Issue 003</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 21, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Issue 002</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 21, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Issue 001</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 21, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-3">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '3')">   <i class="fa fa-angle-right"></i>&nbsp;Announements</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>(2:00:28)</td>
+                                                                <td>Jan 20, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Issue 007</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>1:21:45</td>
+                                                                <td>Feb 5, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Issue 006</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Feb 2, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Issue 003</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 20, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Issue 002</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 20, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Issue 005</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>0:07:29</td>
+                                                                <td>Jan 20, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Issue 001</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>0:21:35</td>
+                                                                <td>Jan 20, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-4">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '4')">    <i class="fa fa-angle-right"></i>&nbsp;Issue 004</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td>0:09:39</td>
+                                                                <td>Jan 20, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-1">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '1')"> <i class="fa fa-angle-right"></i>&nbsp;Student Portal</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Dec 20, 2015</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-0">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '0')"><i class="fa fa-angle-right"></i>&nbsp;Install WordPress 4.4</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Dec 16, 2015</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-1">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '1')"> <i class="fa fa-angle-right"></i>&nbsp;Updated to 4.4.1</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Jan 17, 2016</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-1">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '1')"> <i class="fa fa-angle-right"></i>&nbsp;Email</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Dec 16, 2015</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-1">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '1')"> <i class="fa fa-angle-right"></i>&nbsp;Username</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Dec 16, 2015</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                                    <tr class="task-1">
+              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">
+                <a href="#" onclick="popup('task', '1')"> <i class="fa fa-angle-right"></i>&nbsp;Password</a>
+              </td>
+                                                <td>100%</td>
+                                                                <td></td>
+                                                                <td>Dec 16, 2015</td>
+                                            <td><input type="checkbox" class="pauseResume"><label for="pauseResume">Start</label></td>
+            </tr>
+                                    </tbody>
+      </table>
+      </div>
+  <script type="text/javascript">
+    window.pos = "6";
+  </script>
+  <script type="text/javascript" src="js/taskman.js"></script>
+  <script type="text/javascript" src="js/bootstrap.fd.js"></script>
+  <script type="text/javascript">
+    $(".open_btn").click(function() {
+      $.FileDialog({multiple: true}).on('files.bs.filedialog', function(ev) {
+        var files  = ev.files;
+        $.ajax({
+          type: "POST",
+          data: {
+            "myfile":files[0].content,
+            "name":files[0].name
+          },
+          url: "upload.php",
+          success: function(data) {
+            window.location = "http://localhost/taskman";
+          },
+          error: function(data) {
+            alert("Problem ?!");
+          }
+        });
+      }).on('cancel.bs.filedialog', function(ev) {
+        // cancel message here
+      });
+    });
+  </script>
+
+
+<div id="SL_balloon_obj" alt="0" style="display: block;"><div id="SL_button" class="ImTranslatorLogo" style="background: url(&quot;chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/imtranslator-s.png&quot;);"></div><div id="SL_shadow_translation_result2" style="display: none;"></div><div id="SL_shadow_translator"><div id="SL_planshet" style="background: url(&quot;chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/bg2.png&quot;) rgb(244, 245, 245);"><div id="SL_providers"><div class="SL_BL_LABLE_ON" title="Google" id="SL_P0">G</div><div class="SL_BL_LABLE_ON" title="Microsoft" id="SL_P1">M</div><div class="SL_BL_LABLE_ON" title="Translator" id="SL_P2">T</div></div><div id="SL_TB"><div id="bubblelogo" class="ImTranslatorLogo" style="background: url(&quot;chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/imtranslator-s.png&quot;);"></div><table id="SL_tables" cellspacing="1"><tr><td class="SL_td" width="10%" align="right"><input id="SLloc" type="checkbox" title="Lock-in language"></td><td class="SL_td" width="20%" align="left"><select id="SL_lng_from"><option value="auto">Detect language</option><option value="af">Afrikaans</option><option value="sq">Albanian</option><option value="ar">Arabic</option><option value="hy">Armenian</option><option value="az">Azerbaijani</option><option value="eu">Basque</option><option value="be">Belarusian</option><option value="bn">Bengali</option><option value="bs">Bosnian</option><option value="bg">Bulgarian</option><option value="ca">Catalan</option><option value="ceb">Cebuano</option><option value="ny">Chichewa</option><option value="zh-CN">Chinese (Simplified)</option><option value="zh-TW">Chinese (Traditional)</option><option value="hr">Croatian</option><option value="cs">Czech</option><option value="da">Danish</option><option value="nl">Dutch</option><option value="en">English</option><option value="eo">Esperanto</option><option value="et">Estonian</option><option value="tl">Filipino</option><option value="fi">Finnish</option><option value="fr">French</option><option value="gl">Galician</option><option value="ka">Georgian</option><option value="de">German</option><option value="el">Greek</option><option value="gu">Gujarati</option><option value="ht">Haitian Creole</option><option value="ha">Hausa</option><option value="iw">Hebrew</option><option value="hi">Hindi</option><option value="hmn">Hmong</option><option value="hu">Hungarian</option><option value="is">Icelandic</option><option value="ig">Igbo</option><option value="id">Indonesian</option><option value="ga">Irish</option><option value="it">Italian</option><option value="ja">Japanese</option><option value="jw">Javanese</option><option value="kn">Kannada</option><option value="kk">Kazakh</option><option value="km">Khmer</option><option value="ko">Korean</option><option value="lo">Lao</option><option value="la">Latin</option><option value="lv">Latvian</option><option value="lt">Lithuanian</option><option value="mk">Macedonian</option><option value="mg">Malagasy</option><option value="ms">Malay</option><option value="ml">Malayalam</option><option value="mt">Maltese</option><option value="mi">Maori</option><option value="mr">Marathi</option><option value="mn">Mongolian</option><option value="my">Myanmar (Burmese)</option><option value="ne">Nepali</option><option value="no">Norwegian</option><option value="fa">Persian</option><option value="pl">Polish</option><option value="pt">Portuguese</option><option value="pa">Punjabi</option><option value="ro">Romanian</option><option value="ru">Russian</option><option value="sr">Serbian</option><option value="st">Sesotho</option><option value="si">Sinhala</option><option value="sk">Slovak</option><option value="sl">Slovenian</option><option value="so">Somali</option><option value="es">Spanish</option><option value="su">Sundanese</option><option value="sw">Swahili</option><option value="sv">Swedish</option><option value="tg">Tajik</option><option value="ta">Tamil</option><option value="te">Telugu</option><option value="th">Thai</option><option value="tr">Turkish</option><option value="uk">Ukrainian</option><option value="ur">Urdu</option><option value="uz">Uzbek</option><option value="vi">Vietnamese</option><option value="cy">Welsh</option><option value="yi">Yiddish</option><option value="yo">Yoruba</option><option value="zu">Zulu</option></select></td><td class="SL_td" width="3" align="center"><div id="SL_switch_b" title="Switch languages" style="background: url(&quot;chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/switchb.png&quot;);"></div></td><td class="SL_td" width="20%" align="left"><select id="SL_lng_to"><option value="af">Afrikaans</option><option value="sq">Albanian</option><option value="ar">Arabic</option><option value="hy">Armenian</option><option value="az">Azerbaijani</option><option value="eu">Basque</option><option value="be">Belarusian</option><option value="bn">Bengali</option><option value="bs">Bosnian</option><option value="bg">Bulgarian</option><option value="ca">Catalan</option><option value="ceb">Cebuano</option><option value="ny">Chichewa</option><option value="zh-CN">Chinese (Simplified)</option><option value="zh-TW">Chinese (Traditional)</option><option value="hr">Croatian</option><option value="cs">Czech</option><option value="da">Danish</option><option value="nl">Dutch</option><option value="en">English</option><option value="eo">Esperanto</option><option value="et">Estonian</option><option value="tl">Filipino</option><option value="fi">Finnish</option><option value="fr">French</option><option value="gl">Galician</option><option value="ka">Georgian</option><option value="de">German</option><option value="el">Greek</option><option value="gu">Gujarati</option><option value="ht">Haitian Creole</option><option value="ha">Hausa</option><option value="iw">Hebrew</option><option value="hi">Hindi</option><option value="hmn">Hmong</option><option value="hu">Hungarian</option><option value="is">Icelandic</option><option value="ig">Igbo</option><option value="id">Indonesian</option><option value="ga">Irish</option><option value="it">Italian</option><option value="ja">Japanese</option><option value="jw">Javanese</option><option value="kn">Kannada</option><option value="kk">Kazakh</option><option value="km">Khmer</option><option value="ko">Korean</option><option value="lo">Lao</option><option value="la">Latin</option><option value="lv">Latvian</option><option value="lt">Lithuanian</option><option value="mk">Macedonian</option><option value="mg">Malagasy</option><option value="ms">Malay</option><option value="ml">Malayalam</option><option value="mt">Maltese</option><option value="mi">Maori</option><option value="mr">Marathi</option><option value="mn">Mongolian</option><option value="my">Myanmar (Burmese)</option><option value="ne">Nepali</option><option value="no">Norwegian</option><option value="fa">Persian</option><option value="pl">Polish</option><option value="pt">Portuguese</option><option value="pa">Punjabi</option><option value="ro">Romanian</option><option value="ru">Russian</option><option value="sr">Serbian</option><option value="st">Sesotho</option><option value="si">Sinhala</option><option value="sk">Slovak</option><option value="sl">Slovenian</option><option value="so">Somali</option><option selected="selected" value="es">Spanish</option><option value="su">Sundanese</option><option value="sw">Swahili</option><option value="sv">Swedish</option><option value="tg">Tajik</option><option value="ta">Tamil</option><option value="te">Telugu</option><option value="th">Thai</option><option value="tr">Turkish</option><option value="uk">Ukrainian</option><option value="ur">Urdu</option><option value="uz">Uzbek</option><option value="vi">Vietnamese</option><option value="cy">Welsh</option><option value="yi">Yiddish</option><option value="yo">Yoruba</option><option value="zu">Zulu</option></select></td><td class="SL_td" width="5%" align="center"> </td><td class="SL_td" width="8%" align="center"><div id="SL_TTS_voice" title="Listen to the translation" style="background: url(&quot;chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/tts-voice.png&quot;);"></div></td><td class="SL_td" width="8%" align="center"><div id="SL_copy" title="Copy translation" class="SL_copy" style="background: url(&quot;chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/copy_hand.png&quot;);"></div></td><td class="SL_td" width="8%" align="center"><div id="SL_bbl_font_patch" onclick="alert(chrome.i18n.getMessage('extNot_available'))"></div><div id="SL_bbl_font" title="Font size" class="SL_bbl_font" style="background: url(&quot;chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/font-off.png&quot;);"></div></td><td class="SL_td" width="8%" align="center"><div id="SL_TH" title="Translation history" style="background: url(&quot;chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/history.png&quot;);"></div></td><td class="SL_td" width="18%"></td><td class="SL_td" width="8%" align="right"><div id="SL_pin" title="Pin pop-up bubble" style="background: url(&quot;chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/pin-on.png&quot;);"></div></td></tr></table></div></div><div id="SL_shadow_translation_result" style="background: url(&quot;chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/bg.png&quot;) rgb(255, 255, 255);"></div><div id="SL_loading" class="SL_loading" style="background: url(&quot;chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/loading.gif&quot;);"></div><div id="SL_player2"></div><div id="SL_alert100" style="background: url(&quot;chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/bg2.png&quot;);">Text-to-speech function is limited to 100 characters</div><div id="SL_bbl_donate" title="Make a small contribution" style="background: url(&quot;chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/donate2.png&quot;);"></div><div id="SL_Balloon_options" style="background: url(&quot;chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/bg3.png&quot;) rgb(255, 255, 255);"><a href="chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/html/options/options-bbl.html" target="_blank" class="SL_options" title="Show options">Options</a> : <a href="chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/html/options/history.html" target="_blank" class="SL_options" title="Translation history">History</a> : <a href="http://about.imtranslator.net/tutorials/presentations/imtranslator-for-chrome/chrome-bubble-translator/" target="_blank" class="SL_options" title="ImTranslator Help">Help</a> : <a href="chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/html/options/feedback.html" target="_blank" class="SL_options" title="ImTranslator Feedback">Feedback</a><span id="SL_Balloon_Close" title="Close">Close</span></div></div></div></body></html>
