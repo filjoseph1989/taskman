@@ -4,7 +4,7 @@ This README would normally document whatever steps are necessary to get your app
 
 ### What is this repository for? ###
 
-* Quick summary
+* Quick summary - 
     Taskman, a word combination of task and man, a personal project aimed to track task and time spent on the project development. It accept .csv type of file, and display the content as html. The layout is base on Google material design using materialite css framework. Taskman is in early stage of development and is not yet adivisable for production use.
 * Version
     1.0.0
